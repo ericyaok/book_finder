@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- Set character encoding for proper text rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensure responsiveness on different devices -->
     <title>Book Finder App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet for styling -->
 </head>
+
 <body>
-    <header>
-        <h1>Find A Book</h1>
-    </header>
-    
-    <main>
-        <section class="search_section">
-            <input type="text" id="search_box" placeholder="Search for books...">
-            <button id="search_button">Search</button>
-        </section>
-        
-        <section class="results_section" id="results">
-            <!-- Books will be displayed here -->
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 Book Finder App</p>
-    </footer>
-    
-    <script src="script.js"></script>
+    <div id="container">
+        <header>
+            <h1>Find A Book</h1>
+            <p id="lastVisit"></p> <!-- Placeholder for displaying the last visit time -->
+            <button id="themeToggle">Toggle Theme</button> <!-- Button to switch between light and dark mode -->
+        </header>
+
+        <main>
+            <section class="search_section">
+                <input type="text" id="search_box" placeholder="Search for books..."> <!-- Input field for book search -->
+                <button id="search_button">Search</button> <!-- Button to trigger the search -->
+            </section>
+
+            <div>
+                <h3>Recent Searches</h3>
+                <div id="recentSearches"></div> <!-- Container to display recent searches -->
+            </div>
+
+            <section class="results_section" id="results">
+                <!-- Books will be displayed here dynamically -->
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Book Finder App</p> <!-- Footer with copyright information -->
+        </footer>
+    </div>
+
+    <script type="module" src="index.js"></script> <!-- Link to the JavaScript module handling app logic -->
 </body>
+
 </html>
